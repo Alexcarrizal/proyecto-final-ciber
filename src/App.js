@@ -788,7 +788,7 @@ const CashBalanceView = ({ sales, cashMovements, addCashMovement, setCashMovemen
                             const id = parseInt(cardIdStr);
                             if (cardType === 'debit') {
                                 addDebitCardTransaction({
-                                    cardId: cardId,
+                                    cardId: id,
                                     transaction: {
                                         id: Date.now(),
                                         date: new Date().toISOString(),
@@ -799,7 +799,7 @@ const CashBalanceView = ({ sales, cashMovements, addCashMovement, setCashMovemen
                                 });
                             } else if (cardType === 'credit') {
                                 addCreditCardTransaction({
-                                    cardId: cardId,
+                                    cardId: id,
                                     transaction: {
                                         id: Date.now(),
                                         date: new Date().toISOString(),
